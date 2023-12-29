@@ -1,5 +1,5 @@
 plugins {
-    application
+    `java-library`
 }
 
 repositories {
@@ -7,8 +7,9 @@ repositories {
 }
 
 dependencies {
-    implementation(libs.jda)
-    implementation(libs.logback)
+    implementation(libs.bundles.jackson)
+    implementation(libs.slf4j.api)
+    implementation(libs.jakarta.annotation)
 }
 
 testing {
@@ -25,8 +26,4 @@ java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(21))
     }
-}
-
-application {
-    mainClass.set("org.hyperskill.community.hyper.App")
 }

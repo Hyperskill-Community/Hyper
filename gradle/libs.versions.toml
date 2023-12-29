@@ -1,7 +1,19 @@
 [versions]
+junit-jupiter = "5.10.1"
 jda = "5.0.0-beta.18"
 logback = "1.4.14"
+slf4j = "2.0.9"
+jackson = "2.16.1"
+jakarta = "2.1.1"
 
 [libraries]
 jda = { group = "net.dv8tion", name = "JDA", version.ref = "jda" }
 logback = { group = "ch.qos.logback", name = "logback-classic", version.ref = "logback" }
+slf4j-api = { group = "org.slf4j", name = "slf4j-api", version.ref = "slf4j" }
+jakarta-annotation = { group = "jakarta.annotation", name = "jakarta.annotation-api", version.ref = "jakarta" }
+jackson-core = { group = "com.fasterxml.jackson.core", name = "jackson-core",  version.ref = "jackson" }
+jackson-databind = { group = "com.fasterxml.jackson.core", name = "jackson-databind",  version.ref = "jackson" }
+jackson-annotations = { group = "com.fasterxml.jackson.core", name = "jackson-annotations",  version.ref = "jackson" }
+
+[bundles]
+jackson = ["jackson-core", "jackson-databind", "jackson-annotations"]
