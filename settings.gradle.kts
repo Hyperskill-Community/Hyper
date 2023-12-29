@@ -5,3 +5,4 @@ plugins {
 
 rootProject.name = "Hyper"
 include("app")
+include("api")
