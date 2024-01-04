@@ -9,6 +9,7 @@ import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.interactions.commands.build.CommandData;
 import org.hyperskill.community.hyper.command.slash.PingCommand;
+import org.hyperskill.community.hyper.command.slash.tag.TagCommand;
 
 public final class App {
     public static void main(String[] args) {
@@ -27,6 +28,7 @@ public final class App {
         List<Command> commands = new ArrayList<>();
 
         commands.add(new PingCommand());
+        commands.add(new TagCommand());
 
         return commands;
     }
